@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section class="common_section">
+            <div id="head">c++ compiler</div>
+            <label for="BgColor">BgColor</label>
+        <select name="lang" onclick="changebg()" id="color">
+            <option value="white">white</option>
+            <option value="blue">blue</option>
+            <option value="black">black</option>
+            <option value="green">green</option>
+          </select>
+          <label for="fontColor">FontColor</label>
+          <select name="lang" onclick="changefont_color()" id="fontcolor">
+            <option value="white">white</option>
+            <option value="blue">blue</option>
+            <option value="black">black</option>
+            <option value="green">green</option>
+            <option value="greenyellow">greenyellow</option>
+          </select>
+        </section>
+    </header>
+    <main>
+        <section class="common_section">
+        <form action="/complier_data" method="post" id="code">
+            <button type="submit">run</button>
+            <label for="cars">Choose a language:</label>
+            <select name="lang" id="cars">
+                <option value="cpp14">c++ 14</option>
+                <option value="cpp">c++</option>
+                <option value="python3">python</option>
+                <option value="java">Java</option>
+              </select>
+              <textarea name="code" id="ide" cols="30" spellcheck="false" rows="10"></textarea>
+              <span><p>input</p></span>
+             <textarea name="input" id="" cols="30" rows="10"></textarea>
+            <br><br>
+            
+        </form>
+    </section> 
+    <section class="common_section">
+       <p> Terminal</p>
+        <div id="output">
+            <ul>
+            </ul>
+        </div>
+    </section>
+    </main>
+    <footer>
+    
+        <section class="common_section">
+            <div class="divterminal">    
+             <ul>
+             </ul>
+            </div>
+        </section>
+    </footer>
+    <script>
+        
+        var changebg = function()
+        {
+        let x = document.getElementById('color').value;
+        document.getElementById("ide").style.backgroundColor = x;
+        }
+        var changefont_color = function()
+        {
+        let x = document.getElementById('fontcolor').value;
+        document.getElementById("ide").style.color = x;
+        }
+    </script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
