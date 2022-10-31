@@ -1,4 +1,9 @@
-{
+{   
+    var location_fun = function()
+                  { 
+                      let lo = $('#output');
+                      window.location.hash = lo;
+                  }
     let post_code = function()
     {
         let new_code  = $('#code');
@@ -10,7 +15,8 @@
                 url:'/complier_data',
                 data:new_code.serialize(),
                 success: function(data)
-                {    console.log(data);
+                {  
+                    location_fun();
                     let newpost = newpostDom(data.data.code);
                   $('#output>ul').prepend(newpost)
                 },

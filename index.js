@@ -1,7 +1,6 @@
 const express  = require('express');
 const app = express();
 const port = 8000;
-// const router  = express.Router();
 var request = require('request');
 const path  = require('path');
 require('dotenv').config();
@@ -10,7 +9,6 @@ app.set('views','./views');
 app.use(express.urlencoded());
 app.use(express.static('./assets'));
 app.post('/complier_data',function(req,res){
-  // console.log(process.env.clientId);
   var program = {
     script :req.body.code,
     language: req.body.lang,
@@ -44,13 +42,13 @@ function (error, response, body) {
 )
 app.get('/',function(req,res)
 {
-  return res.render('index');;
+  return res.render('index');
 })
 
 
 
 
-app.listen(port,function(err)
+app.listen(port,'10.0.4.224',function(err)
 {
     if(err)
     {

@@ -1,10 +1,7 @@
-header
+body
 {
-    display: inline;
-    background-color: black;
-    width:95vw;
-    font-family: sans-serif;
-
+    background-color: whitesmoke;
+    padding: 10px;
 }
 .common_section
 {
@@ -17,6 +14,37 @@ header
     background-color: whitesmoke;
     
 }
+select ,option{
+    border: 1.5px;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+select > option:hover{
+    color: black;
+}
+select option {
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
+    padding: 10px;
+    overflow: scroll;
+}
+select:hover
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+header > section 
+{
+    display: inline-block !important;
+    background-color: black;
+    width:95vw;
+    font-family: sans-serif;
+}
+label{
+    padding: 10px;
+}
+
 form
 {
     display: flex;
@@ -28,13 +56,13 @@ form
 textarea
 {
     background-color: black;
-    color: white;
+    color: greenyellow;
     resize: none; 
 }
 #ide
 {
     
-    width: 90vw;
+    width: 95vw;
     height: 70vh;
 }
 
@@ -62,7 +90,7 @@ table
 {
     border: 2px solid red;
     border-collapse: collapse;
-    width: 90vw;
+    width: 95vw;
     font-family: sans-serif;
     background-color: black;
     color: greenyellow;
@@ -90,8 +118,15 @@ button {
   
   button {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   margin: 3px;
   }
   
   button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  #output ul
+  {
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }

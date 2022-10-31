@@ -6,51 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/index.css">
-    <title>Document</title>
+    <title>Online Compiler</title>
 </head>
 <body>
     <header>
+        <h1>Online Compiler</h1>
         <section class="common_section">
-            <div id="head">c++ compiler</div>
             <label for="BgColor">BgColor</label>
         <select name="lang" onclick="changebg()" id="color">
-            <option value="white">white</option>
-            <option value="blue">blue</option>
             <option value="black">black</option>
+            <option value="blue">blue</option>
+            <option value="white">white</option>
             <option value="green">green</option>
+            <option value="red">red</option>
           </select>
           <label for="fontColor">FontColor</label>
           <select name="lang" onclick="changefont_color()" id="fontcolor">
+            <option value="greenyellow">greenyellow</option>
             <option value="white">white</option>
             <option value="blue">blue</option>
             <option value="black">black</option>
             <option value="green">green</option>
-            <option value="greenyellow">greenyellow</option>
+            <option value="red">red</option>
+          </select>
+          <label for="fontize">FontSize</label>
+          <select name="lang" onclick="size_font()" id="fontsize">
+            <option value="large">20</option>
+            <option value="xx-small">12</option>
+            <option value="x-small">14</option>
+            <option value="small">16</option>
+            <option value="medium">18</option>
+            <option value="x-large">24</option>
+            <option value="xx-large">32</option>
           </select>
         </section>
     </header>
     <main>
         <section class="common_section">
         <form action="/complier_data" method="post" id="code">
-            <button type="submit">run</button>
             <label for="cars">Choose a language:</label>
             <select name="lang" id="cars">
-                <option value="cpp14">c++ 14</option>
-                <option value="cpp">c++</option>
+                <option value="cpp14">C++ 14</option>
+                <option value="cpp17">C++ 17</option>
+                <option value="cpp">C++</option>
+                <option value="c">C</option>
                 <option value="python3">python</option>
                 <option value="java">Java</option>
+                <option value="php">Php</option>
+                <option value="ruby">Ruby</option>
+                <option value="go">Go</option>
+                <option value="sql">Sql</option>
+                <option value="csharp">C#</option>
+                <option value="swift">Swift</option>
+                <option value="dart">Dart</option>
+                <option value="nodejs">NodeJS</option>
               </select>
+              <br>
+              <button type="submit">run</button>
+              <br>
               <textarea name="code" id="ide" cols="30" spellcheck="false" rows="10"></textarea>
               <span><p>input</p></span>
              <textarea name="input" id="" cols="30" rows="10"></textarea>
             <br><br>
-            
+            <button >run</button>
         </form>
     </section> 
     <section class="common_section">
        <p> Terminal</p>
+       <button onclick="clear_fun()" >clear</button>
         <div id="output">
-            <ul>
+            <ul id="Terminal">
             </ul>
         </div>
     </section>
@@ -58,18 +83,25 @@
     <footer>
     
         <section class="common_section">
-            <div class="divterminal">    
-             <ul>
-             </ul>
-            </div>
         </section>
     </footer>
     <script>
-        
+       var clear_fun = function()
+       {
+           var listElements = document.querySelectorAll("#output li");
+            for (var i = 0; (li = listElements[i]); i++) {
+            li.parentNode.removeChild(li);
+            }
+        }
         var changebg = function()
         {
         let x = document.getElementById('color').value;
         document.getElementById("ide").style.backgroundColor = x;
+        }
+        var size_font = function()
+        {
+        let x = document.getElementById('fontsize').value;
+        document.getElementById("ide").style.fontSize = x;
         }
         var changefont_color = function()
         {
