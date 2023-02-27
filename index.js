@@ -48,7 +48,7 @@ app.get('/',function(req,res)
 
 
 
-app.listen(port,'10.0.4.224',function(err)
+app.listen(port,function(err)
 {
     if(err)
     {

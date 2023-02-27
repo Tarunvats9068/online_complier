@@ -10,9 +10,10 @@
 </head>
 <body>
     <header>
-        <h1>Online Compiler</h1>
-        <section class="common_section">
-            <label for="BgColor">BgColor</label>
+        <div id="header_id"
+        ><h1>Online Compiler</h1></div>
+        <section class="common_section" id="common_sect1">
+        <label for="color">BgColor</label>
         <select name="lang" onclick="changebg()" id="color">
             <option value="black">black</option>
             <option value="blue">blue</option>
@@ -20,7 +21,7 @@
             <option value="green">green</option>
             <option value="red">red</option>
           </select>
-          <label for="fontColor">FontColor</label>
+          <label for="fontcolor">FontColor</label>
           <select name="lang" onclick="changefont_color()" id="fontcolor">
             <option value="greenyellow">greenyellow</option>
             <option value="white">white</option>
@@ -29,7 +30,7 @@
             <option value="green">green</option>
             <option value="red">red</option>
           </select>
-          <label for="fontize">FontSize</label>
+          <label for="fontsize">FontSize</label>
           <select name="lang" onclick="size_font()" id="fontsize">
             <option value="large">20</option>
             <option value="xx-small">12</option>
@@ -66,7 +67,7 @@
               <br>
               <textarea name="code" id="ide" cols="30" spellcheck="false" rows="10"></textarea>
               <span><p>input</p></span>
-             <textarea name="input" id="" cols="30" rows="10"></textarea>
+             <textarea name="input" id="inp" cols="30" rows="10"></textarea>
             <br><br>
             <button >run</button>
         </form>
@@ -97,11 +98,13 @@
         {
         let x = document.getElementById('color').value;
         document.getElementById("ide").style.backgroundColor = x;
+        document.getElementById("inp").style.backgroundColor = x;
         }
         var size_font = function()
         {
         let x = document.getElementById('fontsize').value;
         document.getElementById("ide").style.fontSize = x;
+        document.getElementById("inp").style.fontSize = x;
         }
         var changefont_color = function()
         {
