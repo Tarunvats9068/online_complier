@@ -1,11 +1,11 @@
 body
 {
     background-color: whitesmoke;
-    padding: 10px;
+    padding: 2px;
 }
 .common_section
 {
-    padding: 5px;
+    /* padding: 5px; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -13,6 +13,17 @@ body
     align-items: center;
     background-color: whitesmoke;
     
+}
+#common_sect1
+{
+    font-size: small;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: .5px; 
+    background-color: black;
+    color: aliceblue;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 select ,option{
     border: 1.5px;
@@ -51,7 +62,6 @@ form
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center; 
-   
 }
 textarea
 {
@@ -61,7 +71,6 @@ textarea
 }
 #ide
 {
-    
     width: 95vw;
     height: 70vh;
 }
@@ -83,8 +92,7 @@ ul
     list-style: none;
 }
 li{
-    padding: 3px;
-    
+    padding: 3px; 
 }
 table
 {
@@ -129,4 +137,13 @@ button {
     align-items: center;
     justify-content: center;
     padding: 0;
+  }
+header{
+    background-color:black;
+    /* color: white;s */
+}
+  #header_id
+  {
+    text-align: center;
+    color: red;
   }
